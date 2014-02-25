@@ -1,19 +1,19 @@
-;;; org-course.el --- utilities for org-course packages
-     
+;;; techela.el --- utilities for techela packages
+
 ;; Copyright (C) 2014 John Kitchin
-     
+
 ;; Author: John R. Kitchin <jkitchin@andrew.cmu.edu>
 ;; Version: 0.1
 ;; Package-Requires: ()
 ;; Keywords: education
-     
 
-     
+
+
 ;;; Commentary:
-     
+
 ;; This package provides utilities for org-course packages. It
-;; provides several new link types: 
-;; pgk:package|file-in-package to make links between installed packages. 
+;; provides several new link types:
+;; pgk:package|file-in-package to make links between installed packages.
 ;; assignment:label creates an assignment in the user course directory
 ;; exercise:label creates an exercise in the user course directory
 ;; ans:string stores the value of string in a property of the current org-headline
@@ -55,7 +55,7 @@ The email body will contain
   (interactive)
 
   ; create the lisp code that will open the file at the point
-  (let* ((lisp-code (format "[[elisp:(progn (find-file \"%s\") (goto-char %d))]]" 
+  (let* ((lisp-code (format "[[elisp:(progn (find-file \"%s\") (goto-char %d))]]"
 			    (file-truename (buffer-file-name)) (point)))
 	 ;; now create the body of the email
 	 (email-body (format "Type your note below here, and press C-c C-c when you are done to send it:
@@ -158,6 +158,6 @@ examples of label:
        (message "incorrect")))))
 
 
-(provide 'org-course)
+(provide 'techela)
 
-;;; org-course.el ends here
+;;; techela.el ends here

@@ -5,8 +5,8 @@ The idea is to install packages like this.
 #+BEGIN_SRC emacs-lisp
 (require 'package)
 
-(add-to-list 
- 'package-archives 
+(add-to-list
+ 'package-archives
  '("kitchingroup" . "http://github.com/jkitchin/elpa/") t)
 
 (unless package-archive-contents    ;; Refresh the packages descriptions
@@ -14,8 +14,8 @@ The idea is to install packages like this.
 
 (setq package-load-list '(all))     ;; List of packages to load
 
-(unless (package-installed-p '15-110)  ;; Make sure the Org package is
-  (package-install '15-110))           ;; installed, install it if not
+(unless (package-installed-p 'techela)  ;; Make sure the Org package is
+  (package-install 'techela))           ;; installed, install it if not
 
 (package-initialize)                ;; Initialize & Install Package
 #+END_SRC
